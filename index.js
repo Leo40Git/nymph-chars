@@ -46,6 +46,9 @@ Jimp.read('combined.png')
 			// we have generated a travesty of an SVG document
 			// hide our shame by optimizing it
 			const result = svgo.optimize(svg, { path: svg_path });
+			if (result.modernError) {
+				throw result.modernError;
+			}
 			svg = result.data;
 			
 			fs.writeFile(svg_path, svg, (err) => {
