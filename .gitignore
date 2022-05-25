@@ -103,5 +103,7 @@ dist
 # TernJS port file
 .tern-port
 
+# combined.png (original file isn't owned by me!)
+combined.png
 # tool output
 svg/
